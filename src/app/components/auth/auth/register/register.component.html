@@ -1,0 +1,124 @@
+<div class="container">
+    <div class="center">
+        <a class="center">
+            <img class="center logo" src="assets/images/logo.png">
+    
+        </a>
+    
+    </div>
+
+    <div class="content-wrapper-inner">
+        <h1 class="center">Welcome!</h1>
+        <h3 class="center">Let’s set up your free portfolio.</h3>
+        <div class="section-wrapper ">
+            <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class=" maskable" >
+                <div class="form-group">
+                    <input type="text" class="form-control email" placeholder="Full Name" formControlName="fullName">
+                    <span class="text-danger"  *ngIf="registerForm.controls['fullName'].hasError('required') && registerForm.controls['fullName'].touched">
+                        Full Name is required
+                    </span>
+                </div>
+                <div class="form-group">
+               
+                <div class="interaction ">
+                    <input formControlName="email"class="form-control email"  type="email"  placeholder="Email address">
+                    <span class="text-danger"  *ngIf="(f.email.invalid && f.email.touched) || f.email.dirty">
+                        <span class="text-danger"  *ngIf="f.email.errors?.required" >User Email Address is required</span>
+                        <!--question mark(?) is a safe navigation operator-->
+                        <span class="text-danger"  *ngIf="f.email.errors?.pattern" >Please provide a valid email address</span>
+                        </span>
+                </div>
+            </div>
+            
+               <div class="form-group">
+                <div class="input-group mb-3">
+      
+                    <input  [type]="showPassword ? 'text' : 'password'"class="form-control" placeholder="Password" formControlName="password" type="password">
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <input type="checkbox" (click)="onTogglePasswordVisibility()"> &nbsp; <span>Show</span>
+                      </div>
+                    </div>
+                  </div>
+                <span class="text-danger"  *ngIf="f.password.touched && f.password.invalid">
+                    <span class="text-danger"  *ngIf ="f.password.errors?.required">Password is required</span>
+                    <span class="text-danger"  *ngIf ="f.password.errors?.minlength">Password must be at least 6 characters</span>
+                    </span>
+                <!-- <div class="inline-wrapper">
+                <input  class="form-control email" autofocus="autofocus" formControlName="password" type="password" name="user[password]" id="user_password">
+                <span class="text-danger"  *ngIf="user.controls['password'].hasError('required') && user.controls['password'].touched">
+                    password is required
+                </span>
+                </div> -->
+               </div>
+
+               <div class="form-group">
+                <div class="input-group mb-3">
+      
+                    <input  [type]="showPassword ? 'text' : 'password'"class="form-control"placeholder="Confirm Password" formControlName="confirm_password" type="password">
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <input type="checkbox" (click)="onTogglePasswordVisibility()"> &nbsp; <span>Show</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span *ngIf="registerForm.controls['confirm_password'].touched && registerForm.controls['confirm_password'].invalid" class="text-danger">
+                    <span *ngIf="registerForm.controls['confirm_password'].errors?.required">Password is required.</span>
+                    <span *ngIf="registerForm.controls['confirm_password'].errors?.confirmedValidator">Password and Confirm Password must be match.</span>
+                  </span>
+                <!-- <div class="inline-wrapper">
+                <input  class="form-control email" autofocus="autofocus" formControlName="password" type="password" name="user[password]" id="user_password">
+                <span class="text-danger"  *ngIf="user.controls['password'].hasError('required') && user.controls['password'].touched">
+                    password is required
+                </span>
+                </div> -->
+               </div>
+               <div >
+                <label for=""> Password requirements:</label>
+               <ul>
+          
+                <li>8 or more characters</li>
+                <li>At least one number and one letter</li>
+                <li>A mix of uppercase and lowercase letters</li>
+                <li>Does not contain your username</li>
+                <li>Does not contain 3 or more identical characters Ex. aaa or 111</li>
+                <li>Does not contain 3 or more consecutive characters Ex. abc or 123</li>
+                <li>Must contain one special characters such as {{text}}</li>
+               </ul>
+            </div>
+
+            <div>
+                <select class="form-control email" formControlName="hear" placeholder="How did you hear about us?">
+                    <option value="" disabled>How did you hear about us?</option>
+                    <option value="The Freelancer">The Freelancer</option>
+                    <option value="The Content Strategist">The Content Strategist</option>
+                    <option value="Client requested I work with them through Content Platform">Client requested I work with them through Content Platform </option>
+                    <option value="Content directly by Content Platform">Content directly by Content Platform</option>
+                    <option value="Referred by a friend">Referred by a friend</option>
+                    <option value="Online blog or forum">Online blog or forum</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="other">
+                <input type="checkbox">
+                <span>
+                    I agree to Contently's <a class="text-primary">Terms of Service</a> and <a class="text-primary">Privacy Policy</a>.</span>
+            </div>
+
+            <div class="other center registerbtn">
+                <button type="submit" class="btn btn-primary" [disabled]="!registerForm.valid">REGISTER</button>
+            </div>
+
+            <div class="other link">
+                <p>Already have an account? <a class="text-primary" (click)="login()">Sign in</a></p>
+            </div>
+               </form>
+               
+        </div> 
+           
+    </div>
+
+    
+    
+</div>

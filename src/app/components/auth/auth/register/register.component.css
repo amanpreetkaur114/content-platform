@@ -1,0 +1,66 @@
+.center{
+    text-align: center !important;
+}
+
+h1{
+    margin-top: 50px;
+    font-weight: lighter;
+    color:#FF8C23;
+}
+
+.logo{
+    width:20%;
+    height:20%;
+}
+
+h3{
+    color:#9C9B99;
+    font-weight: lighter;
+}
+
+.new_user{
+    text-align: center;
+}
+
+.section-wrapper{
+    margin-top: 30px;
+    margin-left: 350px;
+    width:50%;
+    text-align: justify;
+}
+
+.email{
+    width:70%;
+}
+
+.pull-right{
+    float: right !important;
+    margin-right: 168px;
+}
+
+.other{
+    
+    margin-top: 80px;
+}
+
+.input-group-append {
+    margin-left: -1px;
+    width: 44%;
+}
+
+.remember-me{
+    margin-top: 20px;
+}
+
+.other{
+    margin-top: 20px;
+}
+
+.registerbtn{
+    margin-right: 100px;
+    
+}
+
+.link{
+    margin-left: 100px;
+}

@@ -1,0 +1,101 @@
+
+<div class="container">
+    <div class="">
+      <h1 style="color:orange;font-size: xx-large;text-align: center;">Create Workflow Template</h1>
+      <form [formGroup]="firstFormGroup" (ngSubmit)="onSubmit()">
+        <div class="form-group">
+                <label  for="template_name">WORKFLOW TEMPLATE NAME <b style="color: rgb(197, 28, 28);">*</b></label><br>
+                <input class="form-control" name="template_name" type="text">
+            </div>
+            <div class="form-group">
+                <div class="example-action-buttons">
+                    <a mat-button (click)="onExpand()" >Expand All </a> 
+                    <a mat-button (click)="onCollapse()">Collapse All</a>
+                  </div>         
+                   </div>
+                   <div class="row">
+                    <div class="col-md-12">
+                    
+
+                      <mat-vertical-stepper [linear]="isLinear" formArrayName="firstCtrl" #stepper>
+                        <div > 
+                      
+                          <div  >
+
+                           <mat-step [completed]="true" *ngFor="let  address of array.controls;  let i=index" [formGroupName]="i"   >
+                           <button class="btn" type="button" (click)="close(i)"><span class="fa fa-times" aria-hidden="true"></span></button>
+                            <mat-card>
+
+                            <div >
+
+                              <div class="row">
+                                <div class="col-md-10">
+                                <!-- <mat-form-field> -->
+                                    <label class="col-md-12">Title</label>
+                                    <textarea class="form-control" formControlName="title" placeholder="Description"></textarea>
+                                  <!-- </mat-form-field> -->
+                              </div>
+                              </div>
+                              <div class="row">
+                                <div class="col-md-10">
+                                <!-- <mat-form-field> -->
+                                    <label class="col-md-12">DESCRIPTION</label>
+                                    <textarea class="form-control" formControlName="description" placeholder="Description"></textarea>
+                                  <!-- </mat-form-field> -->
+                              </div>
+                              </div>
+                          
+                              
+                          <div class="row">
+                            <div class="col-md-10">
+                              <!-- <mat-form-field> -->
+                                <div class="col-md-12">
+        
+                                <label>DURATION(IN BUSSINESS DAYS)</label>
+                                </div>
+                                <span> Days to Complete the step</span>
+                                <input class="form-control days" formControlName="duration" type="number" min="1">
+                              <!-- </mat-form-field> -->
+                            </div>
+                          </div>
+        
+                            <div class="row">
+                                <div class="col-md-10">
+                              <!-- <mat-form-field> -->
+                                <label class="col-md-12">ASSIGN TO</label>
+                                <span> can assign when creating a story</span>
+                                <input formControlName="assignTo" class="form-control" placeholder="Select Someone later">
+                              <!-- </mat-form-field> -->
+                              </div>
+                            </div>
+        
+                              <!-- <ng-template matStepLabel>Step {{i + 1}}</ng-template> -->
+                         </div>
+                        </mat-card>
+
+                        </mat-step>
+                        </div>
+                      </div>
+                      
+                        </mat-vertical-stepper>
+                      
+                       
+                      <!-- </form> -->
+                    <button class="btn btn-primary" type="button" (click)="addNewAlias();">Add Step</button>
+                <!-- </div> -->
+                <hr/>
+                <!-- <div class="col-md-12"> -->
+                <div class="btn-group ">
+                    <button class="btn" (click)="onCancel()" type="button">Cancel</button>
+                    <button class="btn btn-primary" type="submit">Save</button>
+                </div>
+            </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
+
+

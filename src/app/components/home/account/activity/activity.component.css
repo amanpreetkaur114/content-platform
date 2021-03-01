@@ -1,0 +1,90 @@
+header {
+    margin-bottom: 33px;
+    clear: both;
+    position: relative;
+}
+
+h1 {
+    font-weight: 300;
+    color: #FF8C23;
+    font-size: 40px;
+    line-height: 1;
+    letter-spacing: -0.05em;
+    margin-bottom: 11px;
+}
+
+.flex-wrapper, .flex-actions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+}
+
+.summary {
+    max-width: 500px;
+}
+
+.summary > .list-item-wrapper {
+    padding: 11px 5px;
+}
+
+.list-item-wrapper {
+    position: relative;
+    border-top: 1px solid #d4d4d4;
+}
+
+.summary > .list-item-wrapper.total-balance {
+    border-bottom: 0;
+}
+.flex-column {
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-preferred-size: 0;
+    flex-basis: 0;
+}
+.flex-wrapper, .flex-actions {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+h5 {
+    font-weight: 500;
+    font-size: 15px;
+}
+.flex-number {
+    text-align: right;
+}
+

@@ -1,0 +1,149 @@
+
+<div class="container">
+    <div class="">  
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <h1 style="font-size: xxx-large;color:orange"> Profile</h1><br/>
+        <div class="row">
+            <label>Photo:</label>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+            <img src="{{image}}"  class="rounded-circle" style="width: 100px !important;" >
+        </div>
+            <div class=" file btn btn-lg btn-primary ">
+                Upload
+                <input  class="upload"  type="file" (change)="onFileSelected($event.target.files)" name="file"/>
+            </div>
+            <br/>
+            <div class="delete col-md-8">
+                <button class="btn btn-custom" (click)="delete()">Delete</button>
+            </div>
+                </div>
+
+        <div class="row form-group">
+        <div class="col-md-5">
+            <label>FIRST NAME*</label>
+            <input type="text" class="form-control" formControlName="firstName" >
+            <span class="text-danger"  *ngIf="f['firstName'].hasError('required') && f['firstName'].touched">
+                First Name is required
+            </span>
+        </div>
+        <div class="col-md-5 pull-right">
+            <label>LAST NAME*</label>
+            <input type="text" class="form-control" formControlName="lastName">
+            <span class="text-danger"  *ngIf="f['lastName'].hasError('required') && f['lastName'].touched">
+                Last Name is required
+            </span>
+        </div>
+    </div>
+
+    <div class="row form-group">
+        <div class="col-md-10">
+        <label>EMAIL*</label>
+        <input type="text" class="form-control" formControlName="email">
+   
+        <span class="text-danger"  *ngIf="(f.email.invalid && f.email.touched) || f.email.dirty">
+            <span class="text-danger"  *ngIf="f.email.errors?.required" >User Email Address is required</span>
+            <!--question mark(?) is a safe navigation operator-->
+            <span class="text-danger"  *ngIf="f.email.errors?.pattern" >Please provide a valid email address</span>
+            </span>
+    </div>
+    <div class="col-md-10">
+        <label>COMPANY</label>
+        <input type="text" class="form-control" formControlName="company">
+    </div>
+    <div class="col-md-10">
+        <label>PRIMARY SKILL*</label>
+        <input type="text" class="form-control" formControlName="personalSkill">
+        <span class="text-danger"  *ngIf="f['personalSkill'].hasError('required') && f['personalSkill'].touched">
+            PRIMARY SKILL is required
+        </span>
+    </div>
+    <div class="col-md-10">
+        <label>PERSONAL WEBSITE URL</label>
+        <input type="text" class="form-control" formControlname="websiteLink">
+    </div>
+    <div class="col-md-10">
+        <label>PHONE NUMBER*</label>
+        <input type="number" class="form-control" formControlName="phoneNumber">
+        <span class="text-danger" min=10 *ngIf="f['phoneNumber'].hasError('required') && f['phoneNumber'].touched">
+            Phone Number is required
+        </span>
+    </div>
+    <div class="col-md-10">
+        <label>LOCATION*</label>
+        <input type="text" class="form-control" formControlName="location">
+        <span class="text-danger"  *ngIf="f['location'].hasError('required') && f['location'].touched">
+            location is required
+        </span>
+    </div>
+    <div class="col-md-10">
+        <label>TIME ZONE *</label>
+        <select type="text" class="form-control" formControlName="timeZone">
+            <option>(GMT-10:00)Hawaii</option>
+            <option>(GMT-6:00)</option>
+            <option></option>
+            <option></option>
+            <option></option>
+            <option></option>
+            <option></option>
+            <option></option>
+            <option></option>
+            <option></option>   
+            <option></option>
+            <option></option>
+            <option></option>
+            <option></option>
+            <option></option>
+            <option></option>
+            <option></option>
+
+
+        </select>
+        <span class="text-danger"  *ngIf="f['timeZone'].hasError('required') && f['timeZone'].touched">
+            timeZone is required
+        </span>
+    </div>
+    <div class="col-md-10">
+        <label>DEPARTMENT *</label>
+        <select type="text" class="form-control" formControlName="department">
+            <option>Customer Success</option>
+            <option>Customer Support</option>
+            <option>Editorial</option>
+            <option>Finance</option>
+            <option>Human Resources</option>
+            <option>Information Technology</option>
+            <option>Legal</option>
+            <option>Management</option>
+            <option>Marketing</option>
+            <option>Product</option>
+            <option>Public Relations</option>
+            <option>Sales</option>
+            <option>Social Media</option>
+
+        </select>
+        <span class="text-danger"  *ngIf="f['department'].hasError('required') && f['department'].touched">
+            department is required
+        </span>
+    </div>
+    <div class="col-md-10">
+        <label>CONTENTPLATFORM PORTFOLIO URL</label>
+        <input type="text" class="form-control" formControlName="portfolioUrl">
+    </div>
+    </div>
+    
+    <div class="pull-right">
+        <button type="submit" style="margin-right: 180px !important;" class="btn btn-primary">Save</button>
+    </div>
+ </form>
+</div>
+
+</div>
+
+
+
+
+
+
+
+

@@ -1,0 +1,82 @@
+<div class="container">
+    <div class="center">
+        <a class="center">
+            <img class="center logo" src="assets/images/logo.png">
+    
+        </a>
+    
+    </div>
+
+    <div class="content-wrapper-inner">
+        <h1 class="center">Welcome back.</h1>
+        <h3 class="center">Let’s get you signed in.</h3>
+        <div class="section-wrapper ">
+        <form [formGroup]="user" (ngSubmit)="onSubmit()" class=" maskable" >
+          
+                <div class="form-group">
+                <label for="user_email pull-left">Email</label>
+                <div class="interaction ">
+                    <input formControlName="email"class="form-control email"  type="email"  >
+                    <span *ngIf="user.controls['email'].hasError('required') && user.controls['email'].touched" class=" text-danger">Please Enter Email</span>
+                    <span *ngIf="user.controls['email'].hasError('pattern') && user.controls['email'].touched" class="text-danger required">Invalid Email</span>
+                </div>
+            </div>
+            <div *ngIf="passwordField" class=" password-wrapper">
+               <div class="form-group">
+                <label for="user_password pull-left">Password</label>
+                <div class="input-group mb-3">
+      
+                    <input  [type]="showPassword ? 'text' : 'password'"class="form-control" formControlName="password" type="password">
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <input type="checkbox" (click)="onTogglePasswordVisibility()"> &nbsp; <span>Show</span>
+                      </div>
+                    </div>
+                  </div>
+                  <span class="text-danger"  *ngIf="user.controls['password'].hasError('required') && user.controls['password'].touched">
+                    password is required
+                </span>
+                <!-- <div class="inline-wrapper">
+                <input  class="form-control email" autofocus="autofocus" formControlName="password" type="password" name="user[password]" id="user_password">
+                <span class="text-danger"  *ngIf="user.controls['password'].hasError('required') && user.controls['password'].touched">
+                    password is required
+                </span>
+                </div> -->
+               </div>
+                <a class="subtext forgot-password" data-ga-event="forgot-password" rel="nofollow" data-method="post" href="/users/password/new?email=test%40test.com">Forgot?</a>
+                </div>
+
+              
+                <div class="pull-right">
+                    <button *ngIf="nextBtn" name="button" type="submit" class="btn btn-primary" (click)="next()">Next</button>
+                </div>
+               
+                <div  *ngIf="passwordField" class=" remember-me">
+                   <div class="row">
+                    <div class="col-md-6">
+                        <input type="checkbox">
+                    Keep me signed in
+                    </div>
+                    <div class="col-md-6">
+                        <button *ngIf="passwordField" name="button" type="submit" class="btn btn-primary">Sign in</button>
+                       </div>
+                    </div>
+                   </div>
+         
+           
+        </form>
+    
+        </div>
+        <div class="other center">
+            <p>
+            No account yet?
+            <a class="text-primary" (click)="register()">Let's get started</a>
+            </p>
+            <p>
+            <a class="text-primary">Sign in with
+            <span ignore=""class="text-primary">Facebook</span>
+            </a></p>
+            </div>
+        </div>
+
+</div>

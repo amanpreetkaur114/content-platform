@@ -1,0 +1,49 @@
+.container{
+    margin-top: 2% !important;
+}
+  .row{
+      margin-top: 2%;
+  }
+
+  label{
+      font-weight: bold;
+      font-size:large
+  }
+  span{
+      color:grey !important;
+      margin-left: 1.5% !important;
+      font-size:large
+
+  }
+  input{
+      margin-left: 1.5% !important;
+      height: 50px;
+  }
+  textarea{
+      margin-left: 2% !important;
+  }
+
+  .days{
+      width: 250px !important;
+  }
+
+  .btn{
+      margin-top: 2%;
+  }
+  
+  mat-expansion-panel-header{
+      background-color:#F8F8F8 !important;
+  }
+  .btn-group{
+      float: right;
+  }
+.fa-times{
+    
+    margin-left: 1000px !important;
+}
+
+  ::ng-deep .mat-vertical-stepper-content 
+{
+    visibility: visible !important;
+    height: 100% !important;
+}

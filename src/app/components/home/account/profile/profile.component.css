@@ -1,0 +1,31 @@
+
+
+.pull-right{
+    float: right  !important;
+}
+
+
+.btn-custom{
+    width: 100px !important;
+    background-color: white;
+    border: black 2px solid !important;
+    color: red;
+}
+
+.delete{
+
+}
+.file{
+    
+  position: relative;
+  overflow: hidden;
+  height: 40px !important;
+  width: 100px !important;
+}
+.upload{
+    position: absolute;
+  font-size: 50px;
+  opacity: 0;
+  right: 0;
+  top: 0;
+}

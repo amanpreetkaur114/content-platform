@@ -1,0 +1,26 @@
+.list-group-item{
+    height:69px !important;
+    font-size:large;
+    
+    background-color:white !important;
+    border:none !important;
+}
+
+.list-group-item.active,
+.list-group-item.active:hover {
+  background-color:white !important;
+  border:none !important;
+  color:black !important;
+  font-weight:500;
+
+}
+
+.row{
+    margin-top: 2% !important;
+}
+
+.list-group{
+  padding-left: 0;
+  padding: 0;
+  margin-right: 10px;
+}

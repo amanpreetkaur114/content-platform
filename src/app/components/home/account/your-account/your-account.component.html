@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-md-3">
+     <div class="container h-100">
+      <div class="list-group h-100" id="list-tab" role="tablist">
+        <a (click)="onClickMenu(1)" class="list-group-item list-group-item-action active" id="activity" data-toggle="list" href="#activity" role="tab" aria-controls="user-setup">Activity</a>
+        <a (click)="onClickMenu(2)" class="list-group-item list-group-item-action" id="list-customer-information" data-toggle="list" href="#password" role="tab" aria-controls="password">Password</a>
+        <a (click)="onClickMenu(3)" class="list-group-item list-group-item-action" id="list-company-office-setup" data-toggle="list" href="#profile" role="tab" aria-controls="profile">Profile</a>
+      </div>
+    </div>
+     </div>
+    <div class="col-md-9">
+        <router-outlet></router-outlet>
+    </div>
+    
+    </div>
+  
+   
