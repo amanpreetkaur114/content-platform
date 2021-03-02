@@ -9,13 +9,20 @@ const routes: Routes = [
     component:HomeComponent,
     children:[
       
-      {
-        path:'template',
-        loadChildren: () => import('./templates/templates.module').then(m => m.TemplatesModule)
-      },
+  
       {
         path:'account',
         loadChildren: () => import('./account/account.module').then(m=> m.AccountModule)
+      },
+      {
+        path:'publication-settings',
+        loadChildren: () => import('./publication-settings/publication-settings.module').then(m=>m.PublicationSettingsModule),
+        // children:[
+        //   {
+        //     path:'template',
+        //     loadChildren: () => import('./templates/templates.module').then(m => m.TemplatesModule)
+        //   },
+        // ]
       }
   
     

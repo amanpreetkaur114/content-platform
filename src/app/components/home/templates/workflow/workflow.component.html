@@ -1,0 +1,55 @@
+<div class="workflow">
+    <div class="row">
+        <div class="col-md-6">
+           <div class="row">
+            <div>
+                <h1 style="color:orange;font-size: xx-large; font-weight: lighter;">Workflow Template</h1>
+            </div>
+            <div style="margin-top: 5px; margin-left: 15px;">
+                <i class="fa fa-question-circle"></i>
+            </div>
+           </div>
+        </div>
+        <div class="col-md-6 pull-right">
+            <button  (click)="onCreateWorkflow()"class="btn btn-primary">Create Workflow</button>
+        </div>
+    </div>
+    <div class=" Default">
+        DEFAULT
+    </div>
+    <div class="row standard">
+        <div class="col-md-6 pull-left">
+            <h3 style="color:#7A7A7A; font-weight: bold;">Standard Workflow</h3>
+        </div>
+        <div class="col-md-6 pull-right">
+            <button class="btn btn-outline-primary">Edit</button>
+        </div>
+    </div>
+    <div>
+        <a class="text-primary">Expand All</a>
+        .
+        <a class="text-primary">Collapse All</a>
+    </div>
+    <mat-vertical-stepper>
+
+        <mat-step label="{{label1}}">
+      
+        </mat-step>
+      
+        <mat-step label="{{label2}}">
+     
+        </mat-step>
+      
+        <mat-step label="{{label3}}">
+      
+        </mat-step>
+
+        <mat-step label="{{label4}}">
+      
+        </mat-step>
+
+        <mat-step label="{{label5}}">
+      
+        </mat-step>
+      </mat-vertical-stepper>
+</div>

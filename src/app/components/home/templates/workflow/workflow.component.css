@@ -1,0 +1,39 @@
+.workflow{
+    margin-top: 10px;
+}
+.mat-stepper-vertical {
+    margin-top: 8px;
+  }
+  
+  .mat-form-field {
+    margin-top: 16px;
+  }
+
+  ::ng-deep .mat-step-header{
+      border: 1px solid;
+      height:5px !important;
+      width:52%;
+  }
+  .fa-question-circle{
+      color: #007BFF !important;
+  }
+
+  .pull-right{
+      float: right;
+  }
+
+  .Default{
+      margin-top: 50px;
+      background-color: #666666;
+      color: white;
+      width:6.3%;
+      letter-spacing: 2px;
+  }
+
+  .standard{
+      margin-top:10px;
+  }
+
+  .btn-outline-primary{
+      background-color: #CFF5FD;
+  }

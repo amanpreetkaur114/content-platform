@@ -5,11 +5,13 @@ import { HomeRoutingModule } from './home-routing.module';
 import { SharedModule } from 'src/app/shared/shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
+import { PublicationSettingsComponent } from './publication-settings/publication-settings.component';
+
 
 
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, PublicationSettingsComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,

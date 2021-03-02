@@ -1,0 +1,29 @@
+<div class="row publication">
+    <div class="col-md-3">
+     <div class="container h-100">
+      <div class="list-group h-100" id="list-tab" role="tablist">
+        <a class="list-group-item list-group-item-action " id="list-user-setup" data-toggle="list" href="#list-user-setup" role="tab" aria-controls="user-setup">Content Portals</a>
+        <a  class="list-group-item list-group-item-action" id="list-customer-information" data-toggle="list" href="#list-customer-information" role="tab" aria-controls="customer-information">Content request forms</a>
+        <a  class="list-group-item list-group-item-action" id="list-company-office-setup" data-toggle="list" href="#list-company-office-setup" role="tab" aria-controls="company-office-setup">Content strategy</a>
+        <a class="list-group-item list-group-item-action" id="list-document-settings" data-toggle="list" href="#list-document-settings" role="tab" aria-controls="document-settings">Integrations</a>
+        <a class="list-group-item list-group-item-action" id="list-destination-system-settings" data-toggle="list" href="#list-destination-system-settings" role="tab" aria-controls="destination-system-settings">Publication activity</a>
+        <a class="list-group-item list-group-item-action" id="list-source-system-accounts" data-toggle="list" href="#list-source-system-accounts" role="tab" aria-controls="source-system-accounts">Pitch guidelines</a>
+        <a  class="list-group-item list-group-item-action" id="list-notification-settings" data-toggle="list" href="#list-notification-settings" role="tab" aria-controls="notification-settings">Settings</a>
+        <a class="list-group-item list-group-item-action" id="list-subscription-settings" data-toggle="list" href="#list-subscription-settings" role="tab" aria-controls="subscription-settings">Tags</a>
+        <a class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#demo">Template</a>
+        <div id="demo" class="collapse">
+            <a class="list-group-item list-group-item-action" id="list-subscription-settings" data-toggle="list" href="#list-subscription-settings" role="tab" aria-controls="subscription-settings">Brief</a>
+            <a class="list-group-item list-group-item-action" id="list-subscription-settings" data-toggle="list" href="#list-subscription-settings" role="tab" aria-controls="subscription-settings">Custom fields</a>
+            <a  (click)="onWorkflow()"class="list-group-item list-group-item-action" id="list-subscription-settings" data-toggle="list"  role="tab" aria-controls="subscription-settings">Workflow</a>
+
+        </div>
+        <a class="list-group-item list-group-item-action" id="list-subscription-settings" data-toggle="list" href="#list-subscription-settings" role="tab" aria-controls="subscription-settings">User Management</a>
+
+      </div>
+    </div>
+     </div>
+    <div class="col-md-9"><router-outlet></router-outlet></div>
+    
+    </div>
+  
+   

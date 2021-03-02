@@ -1,0 +1,10 @@
+.publication{
+    margin-top: 20px;
+}
+
+.list-group-item {
+    margin-top: 10px;
+    border: none !important;
+    color: #7F7F7F;
+    font-family: Arial, Helvetica, sans-serif;
+}
