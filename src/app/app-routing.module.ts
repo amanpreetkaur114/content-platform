@@ -4,10 +4,10 @@ import { LoginComponent } from './components/auth/auth/login/login.component';
 
 const routes: Routes = [
   {
-    path:'',
+    path:'auth',
     children:[
       {
-        path:'auth',
+        path:'',
         loadChildren: () => import('./components/auth/auth/auth.module').then(m => m.AuthModule)
         
       },
@@ -16,7 +16,7 @@ const routes: Routes = [
   },
   {
     path:'',
-    redirectTo:'login',
+    redirectTo:'auth',
     pathMatch:'full'
   },
   // {
@@ -30,10 +30,10 @@ const routes: Routes = [
   //   ],
   // },
   {
-    path:'',
+    path:'home',
     children:[
       {
-        path:'home',
+        path:'',
     loadChildren:()=> import('./components/home/home.module').then(m=>m.HomeModule)
   },
     ]
