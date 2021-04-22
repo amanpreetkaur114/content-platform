@@ -1,0 +1,12 @@
+.custom{
+    background-color: #CFF5FD;
+    margin-bottom:5px ;
+}
+
+.container-fluid{
+    width: 80%;
+}
+
+.pull-right{
+    float:right;
+}

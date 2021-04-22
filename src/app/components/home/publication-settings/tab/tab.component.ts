@@ -16,4 +16,8 @@ export class TabComponent implements OnInit {
   onWorkflow(){
     this.router.navigate(['home/publication-settings/tab/template/workflow']);
   }
+
+  onBrief(){
+    this.router.navigate(['home/publication-settings/tab/template/brief']);
+  }
 }

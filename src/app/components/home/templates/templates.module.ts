@@ -5,10 +5,12 @@ import { TemplatesRoutingModule } from './templates-routing.module';
 import { SharedModule } from 'src/app/shared/shared/shared.module';
 import { WorkflowComponent } from './workflow/workflow.component';
 import { WorkflowTemplateComponent } from './workflow-template/workflow-template.component';
+import { BriefComponent } from './brief/brief.component';
+import { BriefTemplateComponent } from './brief-template/brief-template.component';
 
 
 @NgModule({
-  declarations: [WorkflowTemplateComponent, WorkflowComponent],
+  declarations: [WorkflowTemplateComponent, WorkflowComponent, BriefComponent, BriefTemplateComponent],
   imports: [
     CommonModule,
     TemplatesRoutingModule,

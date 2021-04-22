@@ -1,0 +1,88 @@
+<div class="container-fluid">
+    <div>
+        <h1 style="color:orange;font-size: xx-large; font-weight: lighter;">Create a brief template</h1>
+    </div>
+    <div>
+        <form>
+            <div class="form-group">
+                <label>Name *</label>
+                <input type="text" class="form-control" placeholder="Give your brief template a name">
+            </div>
+
+            <div class="form-group">
+                <label>Story Format *</label>
+                <select class="form-control" placeholder="select a story format">
+                    <option value="Article/blog post">Article/blog post</option>
+                    <option value="Case study">Case study</option>
+                    <option value="ebook">ebook</option>
+                    <option value="Email">Email</option>
+                    <option value="Facebook post">Facebook post</option>
+                    <option value="Infographic">Infographic</option>
+                    <option value="LinkedIn post">LinkedIn post</option>
+                    <option value="Original research">Original research</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Campaign</label>
+                <select class="form-control">
+                    <option *ngFor="let Campaign of campaign" value={{Campaign.text}}>{{Campaign.text}}</option>
+                </select>
+            </div>
+            
+            <div class="row custom">
+                <div class="form-group col-md-6">
+                    <label>Audience</label>
+                    <select class="form-control">
+                        <option value="Young Professionals">Young Professionals</option>
+                        <option value="Artists">Artists</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-6">
+                    <label>Pillar</label>
+                    <select class="form-control">
+                        <option value="Credit Card Travel rewards">Credit Card Travel rewards</option>
+                        <option value="Content Management">Content Management</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label><span><i class="fa fa-caret-down" aria-hidden="true"></i></span>
+                    Custom Fields</label>
+                <div class="row">
+                    <div class="col-md-6">
+                        <span><input type="checkbox">&nbsp;<i class="fas fa-video"></i>&nbsp;<span>Final Cut 20s</span></span><br>
+                        <span><input type="checkbox">&nbsp;<i class="fab fa-picture-o" aria-hidden="true"></i>&nbsp;<span>Hero image 2</span></span><br>
+                        <span><input type="checkbox">&nbsp;<i class="fa fa-font" aria-hidden="true"></i>&nbsp;<span>Authored data</span></span><br>
+                        <span><input type="checkbox">&nbsp;<i class="fa fa-font" aria-hidden="true"></i>&nbsp;<span>Teaser Copy</span></span><br>
+                        <span><input type="checkbox">&nbsp;<i class="fa fa-font" aria-hidden="true"></i>&nbsp;<span>Teaser Title</span></span><br>
+                        <span><input type="checkbox">&nbsp;<i class="fa fa-font" aria-hidden="true"></i>&nbsp;<span>Seo tags title</span></span><br>
+                        <span><input type="checkbox">&nbsp;<i class="fa fa-font" aria-hidden="true"></i>&nbsp;<span>Narrow image</span></span><br>
+
+
+                    </div>
+                    <div class="col-md-6">
+                        <span><input type="checkbox">&nbsp;<i class="fa fa-font" aria-hidden="true"></i>&nbsp;<span>Read moe CTA</span></span><br>
+                        <span><input type="checkbox">&nbsp;<i class="fa fa-font" aria-hidden="true"></i>&nbsp;<span>Hero image</span></span><br>
+                        <span><input type="checkbox">&nbsp;<i class="fa fa-font" aria-hidden="true"></i>&nbsp;<span>large image</span></span><br>
+                        <span><input type="checkbox">&nbsp;<i class="fa fa-font" aria-hidden="true"></i>&nbsp;<span>Media</span></span><br>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Tags</label>
+                <select class="form-control">
+                    <option value=""></option>
+                </select>
+            </div>
+
+            <div class="pull-right">
+                <button type="button" class="btn btn-outline-primary">Cancel</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -11,8 +11,8 @@
         <a  class="list-group-item list-group-item-action" id="list-notification-settings" data-toggle="list" href="#list-notification-settings" role="tab" aria-controls="notification-settings">Settings</a>
         <a class="list-group-item list-group-item-action" id="list-subscription-settings" data-toggle="list" href="#list-subscription-settings" role="tab" aria-controls="subscription-settings">Tags</a>
         <a class="list-group-item list-group-item-action" data-toggle="collapse" data-target="#demo">Template</a>
-        <div id="demo" class="collapse">
-            <a class="list-group-item list-group-item-action" id="list-subscription-settings" data-toggle="list" href="#list-subscription-settings" role="tab" aria-controls="subscription-settings">Brief</a>
+        <div id="demo" class  ="collapse">
+            <a (click)="onBrief()"class="list-group-item list-group-item-action" id="list-subscription-settings" data-toggle="list" role="tab">Brief</a>
             <a class="list-group-item list-group-item-action" id="list-subscription-settings" data-toggle="list" href="#list-subscription-settings" role="tab" aria-controls="subscription-settings">Custom fields</a>
             <a  (click)="onWorkflow()"class="list-group-item list-group-item-action" id="list-subscription-settings" data-toggle="list"  role="tab" aria-controls="subscription-settings">Workflow</a>
 

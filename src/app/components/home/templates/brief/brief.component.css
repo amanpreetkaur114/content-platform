@@ -1,0 +1,11 @@
+.pull-right{
+    float: right;
+}
+
+#accordion{
+    width:64.5%;
+}
+
+.btn-outline-primary{
+    background-color: #CFF5FD;
+}
