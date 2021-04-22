@@ -3,11 +3,26 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
 };
 
-/*
- * For easier debugging in development mode, you can import the following file
+
+const callurls = (() => {
+  const callUrlsKey = localStorage.getItem('callurls');
+  if (!callUrlsKey) { return null; }
+  try {
+    return JSON.parse(callUrlsKey);
+  } catch (e) {
+    return null;
+  }
+})();
+
+export const urls = callurls || {
+  apiUrl:'https://localhost:44381/contentarabia/1.0/',
+}/*
+ * For easier debug
+
+ging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
  *
  * This import should be commented out in production mode because it will have a negative impact

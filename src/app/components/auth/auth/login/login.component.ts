@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
+import { AuthenticateService } from 'src/app/services/authenticate.service';
+import { DataStoreService } from 'src/app/services/data-store.service';
 
 @Component({
   selector: 'app-login',
@@ -13,7 +16,10 @@ export class LoginComponent implements OnInit {
   nextBtn:Boolean=true
   showPassword = false;
   constructor(public fb: FormBuilder,
-    public router: Router) {
+    public router: Router,
+    public authService: AuthenticateService,
+    public toastr: ToastrService,
+    public dataStore: DataStoreService) {
     
    }
 
@@ -34,7 +40,21 @@ this.passwordField=true;
   }
 
 onSubmit(){
-  console.log(this.user.value)
+  console.log(this.user.value);
+  this.authService.onLogin(this.user.value).subscribe(res=>{
+    console.log(res);
+    const token = localStorage.setItem('token', res['token']);
+   this.dataStore.currentUser =res;
+    if (res){
+      this.toastr.success('login Successfully');
+      this.router.navigate(['/home']);
+    }
+  },
+  err=>{
+    this.toastr.error("Error","Something went wrong,please try again");
+    console.log(err);
+  }
+  );
 }
 
 onTogglePasswordVisibility () {

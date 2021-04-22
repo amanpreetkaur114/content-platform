@@ -10,6 +10,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatStepperModule} from '@angular/material/stepper';
 import {MatCardModule} from '@angular/material/card';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
+import { AuthenticateService } from 'src/app/services/authenticate.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -26,6 +28,7 @@ import { ToastrModule, ToastrService } from 'ngx-toastr';
     MatInputModule,
     MatStepperModule,
     MatCardModule,
+    HttpClientModule
   ],
   exports:[
     FormsModule,
@@ -37,9 +40,9 @@ import { ToastrModule, ToastrService } from 'ngx-toastr';
     MatInputModule,
     MatSelectModule,
     MatCardModule,
-
+    HttpClientModule
   ],
-  providers:[  ]
+  providers:[AuthenticateService]
 
 })
 export class SharedModule { }
