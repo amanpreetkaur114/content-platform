@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthenticateService } from 'src/app/services/authenticate.service';
+import { DataStoreService } from 'src/app/services/data-store.service';
+import { TemplatesService } from 'src/app/services/templates.service';
 
 @Component({
   selector: 'app-workflow',
@@ -15,9 +18,13 @@ export class WorkflowComponent implements OnInit {
   label4 = "Final Check";
   label5 = "Completed";
   constructor(
-    public router : Router) {}
+    public router: Router,
+    public templateService: TemplatesService,
+    public dataStore: DataStoreService,
+    public authService: AuthenticateService) { }
 
   ngOnInit() {
+
   }
 
   onCreateWorkflow(){

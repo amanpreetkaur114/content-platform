@@ -12,6 +12,7 @@ import {MatCardModule} from '@angular/material/card';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
 import { AuthenticateService } from 'src/app/services/authenticate.service';
 import { HttpClientModule } from '@angular/common/http';
+import { TemplatesService } from 'src/app/services/templates.service';
 
 
 
@@ -42,7 +43,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     HttpClientModule
   ],
-  providers:[AuthenticateService]
+  providers: [
+    AuthenticateService,
+    TemplatesService
+  ]
 
 })
 export class SharedModule { }

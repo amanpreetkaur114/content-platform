@@ -8,6 +8,7 @@ import { urls } from 'src/environments/environment';
 })
 export class AuthenticateService {
 
+  
   constructor(private http: HttpClient) { }
 
   onLogin(user){
@@ -21,5 +22,10 @@ export class AuthenticateService {
     //   const token = localStorage.setItem('token', res['token']);
     //   console.log(token);
     // })
+  }
+
+  getAllUsers() {
+    
+    return this.http.get(urls.apiUrl + 'user/getAll');
   }
 }
